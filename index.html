@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi feet met</title>
+</head>
+<body>
+<select id="mySelect" onchange="do_something()">
+    <option value="feetMeter">Convert FEET => METER</option>
+    <option value="meterFeet">Convert METER => FEET</option>
+</select>
+<p><input id="giaTri"></p>
+<p>
+    <button onclick="convert()">Convert</button>
+</p>
+<p id="ketQua"></p>
+<script>
+
+
+    function do_something() {
+
+        let input = document.getElementById('giaTri').value;
+        let select = document.getElementById('mySelect').value;
+        if (select == 'feetMeter'){
+            ketqua = 0.305 * input;
+        } else {
+            ketqua = 3.279 * input;
+        }
+    }
+    function convert() {
+        do_something()
+
+        document.getElementById('ketQua').innerHTML = ketqua;
+
+    }
+
+
+</script>
+</body>
+</html>
